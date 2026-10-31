@@ -1,0 +1,243 @@
+.menu{
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: rgb(247, 241, 241);
+}
+.menu img{
+   width: 4%;
+   height: 65%;
+   border-radius: 50%;
+   margin-top: 5px;
+}
+.menu a{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 10px;
+}
+#home {
+    display: flex;
+    width: 95%;
+    text-align: center;
+    background-color: rgb(235, 242, 247);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px; 
+}
+.about{
+    text-align: center;
+    width: 50%;
+}
+.about img {
+    display: block;
+    width: 40%;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.about p {
+    width: 50%;
+    margin-left: auto;  
+    margin-right: auto;
+}   
+.hobbies ul{
+    font-size: 1.5rem;
+    width: 90%;
+    line-height: 2;
+    text-align: left;
+    margin-left: 10%;
+    margin-right: auto;
+}
+
+
+#papers{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:rgb(247, 241, 241);
+    padding: 10px;
+}
+
+.paper{
+    background-color: #f8f9fa;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.paper img{
+    width: 50px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#footer{
+    width: 95%;
+    margin: auto;
+    background-color: rgb(247, 241, 241);
+    padding: 30px;
+    border-radius: 10px;
+}
+.hometown, .wiki, .socialMedia{
+    text-align:center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hometown img{
+    width: 150px;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+}
+.hometown b{
+    height: auto;
+    display: block;
+}
+
+.wiki img{
+    width:120px;
+    display:block;
+}
+.mediaImages{
+    display:flex;
+    gap:50px;
+    margin-bottom:20px;
+}
+
+.mediaImages img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.socialMedia button, .wiki button{
+    background-color: #003366;
+    color: white;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+:root{
+    --main-radius: 5px;
+    --main-padding:5px;
+}
+body{
+    background-color: #e8e3e3;
+}
+
+.container{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 0.1fr .9fr .9fr .2fr;
+gap: 0.5rem;
+grid-template-areas:
+"nav nav nav"
+"main main main"
+"papers papers papers"
+"footer footer footer";
+}
+
+.header{
+    grid-area: nav;
+}
+header{
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+.links{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.hamburger{
+    display: none;
+    font-size: 2rem;
+}
+main{
+    grid-area: main;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+#paperContainer{
+    border-radius: var(--main-radius);
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:20px;
+}
+
+#papers{
+    grid-area: papers;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer{
+    border-radius: var(--main-radius);
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* For Mobile View */
+@media only screen and (max-width: 700px){
+.container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "nav"
+        "main"
+        "papers"
+        "footer";
+    }
+
+.menu img{
+    display: none;
+}
+
+.links {
+    display: none;
+}
+
+.hamburger {
+    display: block;
+    text-align: center;
+}
+.links.show{
+display: flex;
+flex-direction: column;
+width: 100%;
+text-align: center;
+}
+
+#home{
+    flex-direction: column;
+    width: 90%;
+}
+.about, .hobbies{
+    width: 100%;
+}
+.about img{
+    width: 70%;
+}
+.about p{
+    text-align: center;
+}
+.hobbies ul{
+    font-size:20px;
+    margin-left: 15%;
+}
+#paperContainer, footer {
+        grid-template-columns: 1fr;
+         gap:5px;
+    }
+}
