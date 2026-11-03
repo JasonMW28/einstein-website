@@ -8,14 +8,13 @@
 .menu img{
    width: 4%;
    height: 65%;
-   border-radius: 50%;
-   margin-top: 5px;
+   justify-content: space-around;
 }
 .menu a{
     color: black;
     font-weight: bold;
     text-decoration: none;
-    margin-top: 10px;
+    margin: auto;
 }
 #home {
     display: flex;
@@ -50,30 +49,25 @@
     margin-left: 10%;
     margin-right: auto;
 }
-
-
 #papers{
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 60%;
+    margin-left: 50px;
+    margin-right: 50px;
     background-color:rgb(247, 241, 241);
-    padding: 10px;
+    padding: 20px;
 }
-
 .paper{
     background-color: #f8f9fa;
     padding:20px;
     border-radius:10px;
     text-align:center;
 }
-
 .paper img{
     width: 50px;
     height: auto;
     display: block;
     margin: 0 auto;
 }
-
 #footer{
     width: 95%;
     margin: auto;
@@ -88,18 +82,12 @@
     align-items: center;
     text-align: center;
 }
-
 .hometown img{
     width: 150px;
     height: auto;
     display: block;
     margin-top: 10px;
 }
-.hometown b{
-    height: auto;
-    display: block;
-}
-
 .wiki img{
     width:120px;
     display:block;
@@ -109,13 +97,10 @@
     gap:50px;
     margin-bottom:20px;
 }
-
 .mediaImages img{
     width: 80px;
     height: 80px;
-    object-fit: cover;
 }
-
 .socialMedia button, .wiki button{
     background-color: #003366;
     color: white;
@@ -124,7 +109,6 @@
     padding: 10px 20px;
     align-items: center;
 }
-
 :root{
     --main-radius: 5px;
     --main-padding:5px;
@@ -167,21 +151,18 @@ main{
     border-radius: var(--main-radius);
     padding: var(--main-padding);
 }
-
 #paperContainer{
     border-radius: var(--main-radius);
     display:grid;
     grid-template-columns:1fr 1fr 1fr;
     gap:20px;
 }
-
 #papers{
     grid-area: papers;
     width: 95%;
     margin-left: auto;
     margin-right: auto;
 }
-
 footer{
     border-radius: var(--main-radius);
     grid-area: footer;
@@ -189,8 +170,44 @@ footer{
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-/* For Mobile View */
+/* For intermediate View 1 */
+@media only screen and (max-width: 900px){
+.hobbies ul{
+    font-size: 1.1rem;
+}
+.hometown img{
+    width: 70px;
+    height: auto;
+    margin-top: 10px;
+}
+.hometown h3, .wiki h3, .socialMedia h3{
+    display: block;
+    font-size: 1.1rem;
+}
+.wiki img{
+    width: 70px;
+    height: auto;
+}
+.mediaImages{
+    display:flex;
+    gap:5px;
+    margin-bottom:10px;
+}
+.mediaImages img{
+    width: 70px;
+    height: auto;
+}
+}
+
+/* For intermediate View 2 */
 @media only screen and (max-width: 700px){
+.hobbies ul{
+    font-size: .8rem;
+}
+}
+
+/* For Mobile View */
+@media only screen and (max-width: 500px){
 .container {
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -237,7 +254,8 @@ text-align: center;
     margin-left: 15%;
 }
 #paperContainer, footer {
-        grid-template-columns: 1fr;
-         gap:5px;
-    }
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
 }
