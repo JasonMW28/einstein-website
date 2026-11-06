@@ -56,6 +56,9 @@
     background-color:rgb(247, 241, 241);
     padding: 20px;
 }
+
+#papers h1{
+    text-align: center;}
 .paper{
     background-color: #f8f9fa;
     padding:20px;
@@ -68,9 +71,34 @@
     display: block;
     margin: 0 auto;
 }
+.gallery{
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(247, 241, 241);
+    padding: 20px;
+}
+.gallery h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.galleryPhoto{
+    text-align: center;
+    gap: 30px;
+}
+.galleryPhoto img{
+    width: 80%;
+    height: 300px;
+    border-radius: 10px;
+     margin-bottom: 10px;
+    margin-top: 5px;
+}
+.galleryPhoto figcaption{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
 #footer{
     width: 95%;
-    margin: auto;
     background-color: rgb(247, 241, 241);
     padding: 30px;
     border-radius: 10px;
@@ -83,29 +111,29 @@
     text-align: center;
 }
 .hometown img{
-    width: 150px;
+    width: 110px;
     height: auto;
     display: block;
     margin-top: 10px;
 }
 .wiki img{
-    width:120px;
-    display:block;
+    width:90px;
 }
 .mediaImages{
     display:flex;
     gap:50px;
-    margin-bottom:20px;
+    margin-top:10px;
+    margin-bottom:10px;
 }
 .mediaImages img{
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
 }
 .socialMedia button, .wiki button{
     background-color: #003366;
     color: white;
     border-radius: 10px;
-    margin: 20px;
+    margin: 10px;
     padding: 10px 20px;
     align-items: center;
 }
@@ -120,12 +148,13 @@ body{
 .container{
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
-grid-template-rows: 0.1fr .9fr .9fr .2fr;
+grid-template-rows: 0.1fr .7fr .7fr 1.2fr .2fr;
 gap: 0.5rem;
 grid-template-areas:
 "nav nav nav"
 "main main main"
 "papers papers papers"
+"gallery gallery gallery"
 "footer footer footer";
 }
 
@@ -163,6 +192,16 @@ main{
     margin-left: auto;
     margin-right: auto;
 }
+.gallery{
+    grid-area: gallery;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+.galleryImages{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+}
 footer{
     border-radius: var(--main-radius);
     grid-area: footer;
@@ -175,13 +214,25 @@ footer{
 .hobbies ul{
     font-size: 1.1rem;
 }
+
+.galleryPhoto{
+    text-align: center;
+    gap: 20px;
+}
+.galleryPhoto img{
+    width: 60%;
+    height: 200px;
+    border-radius: 10px;
+     margin-bottom: 10px;
+    margin-top: 10px;
+}
+
 .hometown img{
     width: 70px;
     height: auto;
     margin-top: 10px;
 }
 .hometown h3, .wiki h3, .socialMedia h3{
-    display: block;
     font-size: 1.1rem;
 }
 .wiki img{
@@ -204,6 +255,42 @@ footer{
 .hobbies ul{
     font-size: .8rem;
 }
+.galleryPhoto{
+    text-align: center;
+    gap: 10px;
+}
+.galleryPhoto img{
+    width: 40%;
+    height: 100px;
+    border-radius: 10px;
+     margin-bottom: 10px;
+    margin-top: 10px;
+}
+.galleryPhoto figcaption{
+    font-size: .8rem;
+    margin-bottom: 10px;
+}
+.hometown img{
+    width: 50px;
+    height: auto;
+    margin-top: 10px;
+}
+.hometown h3, .wiki h3, .socialMedia h3{
+    font-size: 0.9rem;
+}
+.wiki img{
+    width: 50px;
+    height: auto;
+}
+.mediaImages{
+    display:flex;
+    gap:5px;
+    margin-bottom:10px;
+}
+.mediaImages img{
+    width: 50px;
+    height: auto;
+}
 }
 
 /* For Mobile View */
@@ -214,9 +301,9 @@ footer{
         "nav"
         "main"
         "papers"
-        "footer"; 
+        "gallery"
+        "footer";
     }
-
 .menu img{
     display: none;
 }
@@ -224,7 +311,6 @@ footer{
 .links {
     display: none;
 }
-
 .hamburger {
     display: block;
     text-align: center;
@@ -253,9 +339,22 @@ text-align: center;
     font-size:20px;
     margin-left: 15%;
 }
-#paperContainer, footer {
+#papers{
+    width: 90%;
+}
+#papers h1{
+    text-align: center;
+}
+#paperContainer{
+    width: auto;
+}
+#paperContainer, .galleryImages, footer {
     display: flex;
     flex-direction: column;
     gap:5px;
+}
+.galleryImages img{
+    width: 40%;
+    height: auto;
 }
 }
